@@ -1,19 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { Container, Header, Content, Tab, Tabs } from 'native-base';
+import Login from "../screens/Login";
+import Home from "../screens/Home";
+import Signup from "../screens/Signup";
 
 export default function Navbar() {
+    const[page, setPage]=useState(1);
+
     return (
-        <View style={styles.container}>
-            <View style={styles.buttonContainer}>
-                <Button onPress={()=>{}} title='Login' color='blue'/>
-            </View>
-            <View style={styles.buttonContainer}>
-                <Button onPress={()=>{}} title='Home' color='blue'/>
-            </View>
-            <View style={styles.buttonContainer}>
-                <Button onPress={()=>{}} title='Signup' color='blue'/>
-            </View>
-        </View>
+        <Container>
+            <Header hasTabs />
+            <Tabs initialPage={1} page={page}>
+                <Tab heading="Login">
+                    <Login setPage={setPage}/>
+                </Tab>
+                <Tab heading="Home">
+                    <Home />
+                </Tab>
+                <Tab heading="Signup">
+                    <Signup />
+                </Tab>
+            </Tabs>
+        </Container>
     );
 }
 

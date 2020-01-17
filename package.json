@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "axios": "^0.19.1",
+    "dayjs": "^1.8.19",
     "expo": "~36.0.0",
+    "expo-font": "~8.0.0",
     "formik": "^2.1.2",
+    "native-base": "^2.13.8",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
